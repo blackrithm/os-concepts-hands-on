@@ -22,7 +22,7 @@ int main() {
             &pi      // Process Information
         )) {
         // Process created successfully
-        std::cout << "Process created successfully. PID: " << pi.dwProcessId << std::endl;
+        cout << "Process created successfully. PID: " << pi.dwProcessId << endl;
         
 
         // Close process and thread handles.
@@ -30,7 +30,7 @@ int main() {
         CloseHandle(pi.hThread);
     } else {
         // Process creation failed
-        std::cerr << "Process creation failed. Error: " << GetLastError() << std::endl;
+        cerr << "Process creation failed. Error: " << GetLastError() << endl;
     }
 
     return 0;
